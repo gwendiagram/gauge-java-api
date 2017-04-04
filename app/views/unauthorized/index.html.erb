@@ -1,0 +1,94 @@
+<div id="margin">
+  <ul class="hidden-print breadcrumb">
+    <li><a href="/docs">Automation Technical Test Web API</a></li>
+    <li class="active">Unauthorized</li>
+  </ul>
+
+
+  <h1 id="service">unauthorized</h1>
+  <div id="spacer"></div>
+  <h2>What is a 401 Unauthorized</h2>
+  <p>The parameter to this message gives a specification of authorization schemes which are acceptable. The client should retry the request with a suitable Authorization header.</p>
+
+
+  <div id="spacer"></div>
+  <h3 id="endpoints">Available Methods</h3>
+  <p>The following unauthorized routes are available:</p>
+  <ul>
+    <li>
+      <span class="label label-primary">GET</span> /unauthorized
+      <span> - used to get the documentation of this endpoint</span>
+    </li>
+    <li>
+      <span class="label label-primary">GET</span> /unauthorized/last
+      <span> - used to check when the last time a POST was done against unauthorized</span>
+    </li>
+    <li>
+      <span class="label label-success">POST</span> /unauthorized
+      <span> - used to send a dummy create request to this endpoint</span>
+    </li>
+  </ul>
+
+
+  <div id="spacer"></div>
+  <h3><span class="label label-primary">GET</span>  /unauthorized</h3>
+  <h3 id="Overview">This url will return you the documentation for this end point</h3>
+  <div id="spacer"></div>
+  <h4>Example GET request</h4>
+  <pre>curl -v -X GET 'http://localhost:3000/unauthorized' </pre>
+
+  <h4>Response</h4>
+  <pre>Status 200 OK</pre>
+
+
+
+  <div id="spacer"></div>
+  <h3><span class="label label-success">POST</span>  /unauthorized</h3>
+  <h3 id="Overview">This url will return you a 401 created response code when you try to do a POST request and return some sample json</h3>
+  <div id="spacer"></div>
+  <h4>Example POST request</h4>
+  <pre>curl -v -X POST 'http://localhost:3000/unauthorized' -H 'Content-Type: application/vnd.json' -d '{"test": 123}'</pre>
+
+  <h4>Response</h4>
+  <pre>Status 401 Unauthorized</pre>
+  <pre><code>
+    '{
+        "statusCode": 401,
+        "error": "Unauthorized",
+        "message": "Invalid token",
+        "attributes": {
+            "error": "Invalid token"
+        }
+    }'
+  </code></pre>
+
+  <div id="spacer"></div>
+  <h3><span class="label label-primary">GET</span>  /unauthorized/last</h3>
+  <h3 id="Overview">This url will return you a 200 OK along with the last updated date/time for the latest POST against the endpoint</h3>
+  <div id="spacer"></div>
+  <h4>Example GET request</h4>
+  <pre>curl -v -X GET 'http://localhost:3000/unauthorized/last' </pre>
+
+  <h4>Response</h4>
+  <pre>Status 200 OK</pre>
+
+  <pre><code>
+    '
+    {
+         "unauthorized": [
+                {
+                    "last updated": "2015-12-08T09:57:59.241Z"
+                }
+         ]
+    }'
+  </code></pre>
+
+
+  <div id="spacer"></div>
+  <form action="/">
+    <input type="submit" value="Return To Home Page">
+  </form>
+  <div id="spacer"></div>
+
+</div>
+

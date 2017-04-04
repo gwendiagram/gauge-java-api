@@ -1,0 +1,18 @@
+
+{
+    "unauthorised":[
+        {
+            "statusCode": 401,
+            "error": "Unauthorized",
+            "message": "Invalid token",
+            "attributes": {
+                "error": "Invalid token"
+            }
+        },
+        { "receivedRequest":[
+            <%= raw @json_body %>
+            ]
+        }
+    ]
+}
+

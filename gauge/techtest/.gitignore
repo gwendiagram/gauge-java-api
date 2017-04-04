@@ -1,0 +1,16 @@
+# IntelliJ
+.idea
+*.iml
+
+# OS X files
+.DS_STORE
+.DS_Store
+
+# Gauge reports
+.gauge/
+out/
+reports/
+logs/
+gauge_bin/
+target
+lib/

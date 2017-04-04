@@ -1,0 +1,93 @@
+<div id="margin">
+  <ul class="hidden-print breadcrumb">
+    <li><a href="/docs">Automation Technical Test Web API</a></li>
+    <li class="active">Bad_request</li>
+  </ul>
+
+  <h1 id="service">bad_request</h1>
+  <div id="spacer"></div>
+  <h2>What is a 400 Bad Request</h2>
+  <p>The request is for something bad_request. Authorization will not help.</p>
+
+  <div id="spacer"></div>
+  <h3 id="endpoints">Available Methods</h3>
+  <p>The following bad_request routes are available:</p>
+  <ul>
+    <li>
+      <span class="label label-primary">GET</span> /bad_request
+      <span> - used to get the documentation of this endpoint</span>
+    </li>
+    <li>
+      <span class="label label-primary">GET</span> /bad_request/last
+      <span> - used to check when the last time a POST was done against bad_request</span>
+    </li>
+    <li>
+      <span class="label label-success">POST</span> /bad_request
+      <span> - used to send a dummy create request to this endpoint</span>
+    </li>
+  </ul>
+
+
+  <div id="spacer"></div>
+  <h3><span class="label label-primary">GET</span>  /bad_request</h3>
+  <h3 id="Overview">This url will return you the documentation for this end point</h3>
+  <div id="spacer"></div>
+  <h4>Example GET request</h4>
+  <pre>curl -v -X GET 'http://localhost:3000/bad_request' </pre>
+
+  <h4>Response</h4>
+  <pre>Status 400 Bad Request</pre>
+
+
+  <div id="spacer"></div>
+  <h3><span class="label label-success">POST</span>  /bad_request</h3>
+  <h3 id="Overview">This url will return you a 503 Gateway timeout response code when you try to do a POST request and return some sample json</h3>
+  <div id="spacer"></div>
+  <h4>Example POST request</h4>
+  <pre>curl -v -X POST 'http://localhost:3000/bad_request' -H 'Content-Type: application/vnd.json' -d '{"test": 123}'</pre>
+
+  <h4>Response</h4>
+  <pre>Status 400 Bad Request</pre>
+
+  <pre><code>
+    '
+    {
+        "receivedRequest": [
+            "request body data"
+        ]
+    }'
+  </code></pre>
+
+
+  <div id="spacer"></div>
+  <h3><span class="label label-primary">GET</span>  /bad_request/last</h3>
+  <h3 id="Overview">This url will return you a 200 OK along with the last updated date/time for the latest POST against the endpoint</h3>
+  <div id="spacer"></div>
+  <h4>Example GET request</h4>
+  <pre>curl -v -X GET 'http://localhost:3000/bad_request/last' </pre>
+
+  <h4>Response</h4>
+  <pre>Status 200 OK</pre>
+
+  <pre><code>
+    '
+    {
+        "bad_request": [{
+            "lastUpdated": "2015-12-10T16:09:48Z"
+        }, {
+            "mediaTypeUsed": "text/plain",
+            "bodyReceived": "username=lalala"
+        }]
+    }'
+  </code></pre>
+
+  <div id="spacer"></div>
+  <form action="/">
+    <input type="submit" value="Return To Home Page">
+  </form>
+  <div id="spacer"></div>
+
+
+</div>
+
+

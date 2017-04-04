@@ -1,0 +1,87 @@
+<div id="margin">
+  <ul class="hidden-print breadcrumb">
+    <li><a href="/docs">Automation Technical Test Web API</a></li>
+    <li class="active">Precondition_failed</li>
+  </ul>
+
+
+  <h1 id="service">precondition_failed</h1>
+  <div id="spacer"></div>
+  <h2>What is a 412 Precondition Failed</h2>
+  <p>The precondition given in one or more of the request-header fields evaluated to false when it was tested on the server. This response code allows the client to place preconditions on the current resource metainformation
+    (header field data) and thus prevent the requested method from being applied to a resource other than the one intended.</p>
+
+
+  <div id="spacer"></div>
+  <h3 id="endpoints">Available Methods</h3>
+  <p>The following precondition_failed routes are available:</p>
+  <ul>
+    <li>
+      <span class="label label-primary">GET</span> /precondition_failed
+      <span> - used to get the documentation of this endpoint</span>
+    </li>
+    <li>
+      <span class="label label-primary">GET</span> /precondition_failed/last
+      <span> - used to check when the last time a POST was done against precondition_failed</span>
+    </li>
+    <li>
+      <span class="label label-success">POST</span> /precondition_failed
+      <span> - used to send a dummy create request to this endpoint</span>
+    </li>
+  </ul>
+
+
+  <div id="spacer"></div>
+  <h3><span class="label label-primary">GET</span>  /precondition_failed</h3>
+  <h3 id="Overview">This url will return you the documentation for this end point</h3>
+  <div id="spacer"></div>
+  <h4>Example GET request</h4>
+  <pre>curl -v -X GET 'http://localhost:3000/precondition_failed' </pre>
+
+  <h4>Response</h4>
+  <pre>Status 200 OK</pre>
+
+
+  <div id="spacer"></div>
+  <h3><span class="label label-success">POST</span>  /precondition_failed</h3>
+  <h3 id="Overview">This url will return you a 412 Precondition Failed response code when you try to do a POST request</h3>
+  <div id="spacer"></div>
+  <h4>Example POST request</h4>
+  <pre>curl -v -X POST 'http://localhost:3000/precondition_failed' -H 'Content-Type: application/vnd.json' -d '{"test": 123}'</pre>
+
+  <h4>Response</h4>
+  <pre>Status 412 Precondition Failed</pre>
+
+
+  <div id="spacer"></div>
+  <h3><span class="label label-primary">GET</span>  /precondition_failed/last</h3>
+  <h3 id="Overview">This url will return you a 200 OK along with the last updated date/time for the latest POST against the endpoint</h3>
+  <div id="spacer"></div>
+  <h4>Example GET request</h4>
+  <pre>curl -v -X GET 'http://localhost:3000/precondition_failed/last' </pre>
+
+  <h4>Response</h4>
+  <pre>Status 200 OK</pre>
+
+  <pre><code>
+    '
+    {
+        "precondition_failed": [
+            {
+                "last updated": "2015-12-08T09:57:59.241Z"
+            }
+        ]
+    }'
+  </code></pre>
+
+
+
+  <div id="spacer"></div>
+  <form action="/">
+    <input type="submit" value="Return To Home Page">
+  </form>
+  <div id="spacer"></div>
+
+</div>
+
+

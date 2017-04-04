@@ -1,0 +1,84 @@
+<div id="margin">
+  <ul class="hidden-print breadcrumb">
+    <li><a href="/docs">Automation Technical Test Web API</a></li>
+    <li class="active">No_response</li>
+  </ul>
+
+
+  <h1 id="service">no_response</h1>
+  <div id="spacer"></div>
+  <h2>What is 204 No Response</h2>
+  <p>Server has received the request but there is no information to send back, and the client should stay in the same document view.
+    This is mainly to allow input for scripts without changing the document at the same time.</p>
+
+  <div id="spacer"></div>
+  <h3 id="endpoints">Available Methods</h3>
+  <p>The following no_response routes are available:</p>
+  <ul>
+    <li>
+      <span class="label label-primary">GET</span> /no_response
+      <span> - used to get the documentation of this endpoint</span>
+    </li>
+    <li>
+      <span class="label label-primary">GET</span> /no_response/last
+      <span> - used to check when the last time a POST was done against no_response</span>
+    </li>
+    <li>
+      <span class="label label-success">POST</span> /no_response
+      <span> - used to send a dummy create request to this endpoint</span>
+    </li>
+  </ul>
+
+
+  <div id="spacer"></div>
+  <h3><span class="label label-primary">GET</span>  /no_response</h3>
+  <h3 id="Overview">This url will return you the documentation for this end point</h3>
+  <div id="spacer"></div>
+  <h4>Example GET request</h4>
+  <pre>curl -v -X GET 'http://localhost:3000/no_response' </pre>
+
+  <h4>Response</h4>
+  <pre>Status 200 No Content</pre>
+
+
+  <div id="spacer"></div>
+  <h3><span class="label label-success">POST</span>  /no_response</h3>
+  <h3 id="Overview">This url will return you a 204 No Content response code when you try to do a POST request and return some sample json</h3>
+  <div id="spacer"></div>
+  <h4>Example POST request</h4>
+  <pre>curl -v -X POST 'http://localhost:3000/no_response' -H 'Content-Type: application/vnd.json' -d '{"test": 123}'</pre>
+
+  <h4>Response</h4>
+  <pre>Status 204 No Content</pre>
+
+
+  <div id="spacer"></div>
+  <h3><span class="label label-primary">GET</span>  /no_response/last</h3>
+  <h3 id="Overview">This url will return you a 200 OK along with the last updated date/time for the latest POST against the endpoint</h3>
+  <div id="spacer"></div>
+  <h4>Example GET request</h4>
+  <pre>curl -v -X GET 'http://localhost:3000/no_response/last' </pre>
+
+  <h4>Response</h4>
+  <pre>Status 200 OK</pre>
+
+  <pre><code>
+    '
+    {
+        "no_response": [{
+            "lastUpdated": "2015-12-10T16:09:48Z"
+        }, {
+            "mediaTypeUsed": "text/plain",
+            "bodyReceived": "username=lalala"
+        }]
+    }'
+  </code></pre>
+
+  <div id="spacer"></div>
+  <form action="/">
+    <input type="submit" value="Return To Home Page">
+  </form>
+  <div id="spacer"></div>
+
+</div>
+

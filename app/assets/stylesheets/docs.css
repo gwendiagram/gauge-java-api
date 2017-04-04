@@ -1,0 +1,66 @@
+/* Rendering of fragment links for heading elements
+-------------------------------------------------- */
+
+.heading-link {
+  position: absolute;
+  left: -0.5em;
+  opacity: 0;
+  font-size: 75%;
+  text-align: right;
+  vertical-align: baseline;
+  color: #000;
+  margin-top: 0.3em;
+
+  -webkit-transition: opacity 0.1s ease-in-out 0.1s;
+  -moz-transition: opacity 0.1s ease-in-out 0.1s;
+  -ms-transition: opacity 0.1s ease-in-out 0.1s;
+}
+
+h1:hover .heading-link,
+h2:hover .heading-link,
+h3:hover .heading-link,
+h4:hover .heading-link,
+h5:hover .heading-link,
+h6:hover .heading-link {
+  opacity: 0.5;
+}
+
+.fieldName.depth1 {
+  padding-left: 1.5em;
+}
+.fieldName.depth2 {
+  padding-left: 3em;
+}
+.fieldName.depth3 {
+  padding-left: 4.5em;
+}
+.fieldName.depth4 {
+  padding-left: 6em;
+}
+.fieldName.depth5 {
+  padding-left: 7.5em;
+}
+.fieldName.depth6 {
+  padding-left: 9em;
+}
+.fieldName.depth7 {
+  padding-left: 10em;
+}
+.fieldName.depth8 {
+  padding-left: 11em;
+}
+.fieldName.depth9 {
+  padding-left: 12em;
+}
+.fieldName.depth10 {
+  padding-left: 13em;
+}
+
+.collapse-caret {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.name-column {
+  width: 25%;
+}

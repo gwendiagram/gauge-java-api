@@ -1,0 +1,2 @@
+module BadRequestHelper
+end

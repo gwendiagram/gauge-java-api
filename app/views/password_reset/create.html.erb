@@ -1,0 +1,12 @@
+<h1>Successfully received a POST to password_reset endpoint</h1>
+<p>If you want to confirm the date/time that the POST was received, do a GET request to password_reset/#</p>
+
+<h3>The request contained the following fields:</h3>
+<ul>
+  <li>
+    <span><span>Media Type - </span><%= raw @received_request_type %></span>
+  </li>
+  <li>
+    <span><span>Body Content - </span><%= raw @json_body %></span>
+  </li>
+</ul>

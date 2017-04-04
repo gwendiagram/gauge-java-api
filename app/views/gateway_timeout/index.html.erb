@@ -1,0 +1,94 @@
+<div id="margin">
+  <ul class="hidden-print breadcrumb">
+    <li><a href="/docs">Automation Technical Test Web API</a></li>
+    <li class="active">Gateway_timeout</li>
+  </ul>
+
+  <h1 id="service">gateway_timeout</h1>
+  <div id="spacer"></div>
+  <h2>What is a 503 Gateway timeout</h2>
+  <p>This is equivalent to Internal Error 500, but in the case of a server which is in turn accessing some other service,
+    this indicates that the response from the other service did not return within a time that the gateway was prepared to wait.
+    As from the point of view of the client and the HTTP transaction the other service is hidden within the server,
+    this maybe treated identically to Internal error 500, but has more diagnostic value.</p>
+
+  <div id="spacer"></div>
+  <h3 id="endpoints">Available Methods</h3>
+  <p>The following gateway_timeout routes are available:</p>
+  <ul>
+    <li>
+      <span class="label label-primary">GET</span> /gateway_timeout
+      <span> - used to get the documentation of this endpoint</span>
+    </li>
+    <li>
+      <span class="label label-primary">GET</span> /gateway_timeout/last
+      <span> - used to check when the last time a POST was done against gateway_timeout</span>
+    </li>
+    <li>
+      <span class="label label-success">POST</span> /gateway_timeout
+      <span> - used to send a dummy create request to this endpoint</span>
+    </li>
+  </ul>
+
+
+  <div id="spacer"></div>
+  <h3><span class="label label-primary">GET</span>  /gateway_timeout</h3>
+  <h3 id="Overview">This url will return you the documentation for this end point</h3>
+  <div id="spacer"></div>
+  <h4>Example GET request</h4>
+  <pre>curl -v -X GET 'http://localhost:3000/gateway_timeout' </pre>
+
+  <h4>Response</h4>
+  <pre>Status 200 Gateway timeout</pre>
+
+
+  <div id="spacer"></div>
+  <h3><span class="label label-success">POST</span>  /gateway_timeout</h3>
+  <h3 id="Overview">This url will return you a 503 Gateway timeout response code when you try to do a POST request and return some sample json</h3>
+  <div id="spacer"></div>
+  <h4>Example POST request</h4>
+  <pre>curl -v -X POST 'http://localhost:3000/gateway_timeout' -H 'Content-Type: application/vnd.json' -d '{"test": 123}'</pre>
+
+  <h4>Response</h4>
+  <pre>Status 503 Gateway timeout</pre>
+
+  <pre><code>
+    '
+    {
+         "receivedRequest": [
+         "request body data"
+        ]
+    }'
+  </code></pre>
+
+
+  <div id="spacer"></div>
+  <h3><span class="label label-primary">GET</span>  /gateway_timeout/last</h3>
+  <h3 id="Overview">This url will return you a 200 OK along with the last updated date/time for the latest POST against the endpoint</h3>
+  <div id="spacer"></div>
+  <h4>Example GET request</h4>
+  <pre>curl -v -X GET 'http://localhost:3000/gateway_timeout/last' </pre>
+
+  <h4>Response</h4>
+  <pre>Status 200 OK</pre>
+
+  <pre><code>
+    '
+    {
+        "gateway_timeout": [{
+            "lastUpdated": "2015-12-10T16:09:48Z"
+        }, {
+            "mediaTypeUsed": "text/plain",
+            "bodyReceived": "username=lalala"
+        }]
+    }'
+  </code></pre>
+
+  <div id="spacer"></div>
+  <form action="/">
+    <input type="submit" value="Return To Home Page">
+  </form>
+  <div id="spacer"></div>
+
+</div>
+

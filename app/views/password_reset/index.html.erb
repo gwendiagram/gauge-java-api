@@ -1,0 +1,79 @@
+<div id="margin">
+  <ul class="hidden-print breadcrumb">
+    <li><a href="/docs">Automation Technical Test Web API</a></li>
+    <li class="active">Password_reset</li>
+  </ul>
+
+  <h1 id="service">password_reset</h1>
+  <div id="spacer"></div>
+  <h2>What is this url used for?</h2>
+  <p>This URL has been created for testing the product HTTP adaptor configuration for a password reset.</p>
+
+  <div id="spacer"></div>
+  <h3 id="endpoints">Available Methods</h3>
+  <p>The following password_reset routes are available:</p>
+  <ul>
+    <li>
+      <span class="label label-primary">GET</span> /password_reset
+      <span> - used to get the documentation of this endpoint</span>
+    </li>
+    <li>
+      <span class="label label-primary">GET</span> /password_reset/last
+      <span> - used to check when the last time a POST was done against password_reset</span>
+    </li>
+    <li>
+      <span class="label label-success">POST</span> /password_reset
+      <span> - used to send a dummy create request to this endpoint</span>
+    </li>
+  </ul>
+
+  <div id="spacer"></div>
+  <h3><span class="label label-primary">GET</span>  /password_reset</h3>
+  <h3 id="Overview">This url will return you the documentation for this end point</h3>
+  <div id="spacer"></div>
+  <h4>Example GET request</h4>
+  <pre>curl -v -X GET 'http://localhost:3000/password_reset' </pre>
+
+  <h4>Response</h4>
+  <pre>Status 200 OK</pre>
+
+  <div id="spacer"></div>
+  <h3><span class="label label-success">POST</span>  /password_reset</h3>
+  <h3 id="Overview">This url will return you a 201 created response code when you try to do a POST request</h3>
+  <div id="spacer"></div>
+  <h4>Example POST request</h4>
+  <pre>curl -v -X POST 'http://localhost:3000/password_reset' -H 'Content-Type: application/vnd.json' -d '{"test": 123}'</pre>
+
+  <h4>Response</h4>
+  <pre>Status 201 Created</pre>
+
+  <div id="spacer"></div>
+  <h3><span class="label label-primary">GET</span>  /password_reset/last</h3>
+  <h3 id="Overview">This url will return you a 200 OK along with the last updated date/time for the latest POST against the endpoint</h3>
+  <div id="spacer"></div>
+  <h4>Example GET request</h4>
+  <pre>curl -v -X GET 'http://localhost:3000/password_reset/last' </pre>
+
+  <h4>Response</h4>
+  <pre>Status 200 OK</pre>
+
+  <pre><code>
+    '
+     {
+        "password_reset": [
+            {
+                "last updated": "2015-12-08T09:57:59.241Z"
+            }
+        ]
+    }'
+  </code></pre>
+
+
+  <div id="spacer"></div>
+  <form action="/">
+    <input type="submit" value="Return To Home Page">
+  </form>
+  <div id="spacer"></div>
+
+</div>
+
